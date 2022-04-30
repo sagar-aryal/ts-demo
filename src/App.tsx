@@ -1,9 +1,11 @@
-import Parent from "./propsTS/Parent";
+import GuestList from "./stateTS/GuestList";
+// import Parent from "./propsTS/Parent";
 
 function App() {
   return (
     <>
-      <Parent />
+      <GuestList />
+      {/*  <Parent /> */}
     </>
   );
 }
