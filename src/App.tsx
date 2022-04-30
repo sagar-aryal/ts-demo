@@ -1,4 +1,4 @@
-import Parent from "./components/Parent";
+import Parent from "./propsTS/Parent";
 
 function App() {
   return (
