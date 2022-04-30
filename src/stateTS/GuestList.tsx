@@ -1,16 +1,32 @@
 import React, { useState } from "react";
 
 const GuestList: React.FC = () => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState<string>("");
+  const [guests, setGuests] = useState<string[]>([]);
 
-  const handleInput = (e) => {
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
+  };
+
+  const handleClick = () => {
+    setName("");
+    setGuests([...guests, name]);
   };
   return (
     <>
       <h1>GuestList</h1>
-      <input type="text" value={name} onChange={handleInput} />
-      <button>Add Guest</button>
+      <input
+        type="text"
+        value={name}
+        placeholder="Enter here..."
+        onChange={handleInput}
+      />
+      <button onClick={handleClick}>Add Guest</button>
+      <ul>
+        {guests.map((guest) => (
+          <li key={guest}>{guest}</li>
+        ))}
+      </ul>
     </>
   );
 };
