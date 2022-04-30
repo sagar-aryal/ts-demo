@@ -2,8 +2,8 @@ interface ChildProps {
   color: string;
 }
 
-const Child = (props: ChildProps) => {
-  return <>{props.color}</>;
+const Child = ({ color }: ChildProps) => {
+  return <>{color}</>;
 };
 
 export default Child;
