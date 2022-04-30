@@ -1,11 +1,9 @@
-import GuestList from "./stateTS/GuestList";
-// import Parent from "./propsTS/Parent";
+import GuestSearch from "./stateTS/GuestSearch";
 
 function App() {
   return (
     <>
-      <GuestList />
-      {/*  <Parent /> */}
+      <GuestSearch />
     </>
   );
 }
