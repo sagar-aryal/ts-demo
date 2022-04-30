@@ -2,4 +2,3 @@
 
 - React
 - TypeScript
-- Tailwind CSS
