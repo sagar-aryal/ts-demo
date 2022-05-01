@@ -5,6 +5,10 @@ const EventComp = () => {
     e.preventDefault();
     console.log(e);
   };
+
+  const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
+    console.log(e);
+  };
   return (
     <>
       <input
@@ -13,6 +17,9 @@ const EventComp = () => {
         placeholder="Please type here..."
         onChange={handleInput}
       />
+      <div draggable onDragStart={handleDragStart}>
+        Drag me !
+      </div>
     </>
   );
 };
