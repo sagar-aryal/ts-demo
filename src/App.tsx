@@ -1,10 +1,9 @@
-import React from "react";
-import EventComp from "./eventsTS/EventComp";
+import GuestSearch from "./refsTS/GuestSearch";
 
 const App = () => {
   return (
     <>
-      <EventComp />
+      <GuestSearch />
     </>
   );
 };
