@@ -35,6 +35,7 @@ const GuestSearch: React.FC = () => {
   >();
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
     setName(e.target.value);
   };
 

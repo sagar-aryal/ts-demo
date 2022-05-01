@@ -1,11 +1,12 @@
-import GuestSearch from "./stateTS/GuestSearch";
+import React from "react";
+import EventComp from "./eventsTS/EventComp";
 
-function App() {
+const App = () => {
   return (
     <>
-      <GuestSearch />
+      <EventComp />
     </>
   );
-}
+};
 
 export default App;
