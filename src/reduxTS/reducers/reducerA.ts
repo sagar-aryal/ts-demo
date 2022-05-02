@@ -18,16 +18,24 @@ interface ErrorActionProps {
   payload: string;
 }
 
+type Action = SearchActionProps | SuccessActionProps | ErrorActionProps;
+
+enum ActionType {
+  SEARCH_REDUCERA = "search_reducerA",
+  SEARCH_REDUCERA_SUCCESS = "search_reducerA_success",
+  SEARCH_REDUCERA_ERROR = "search_reducerA_error",
+}
+
 const reducerA = (
   state: ReducerAStateProps,
-  action: SearchActionProps | SuccessActionProps | ErrorActionProps
+  action: Action
 ): ReducerAStateProps => {
   switch (action.type) {
-    case "search_reducerA":
+    case ActionType.SEARCH_REDUCERA:
       return { loading: true, error: null, data: [] };
-    case "search_reducerA_success":
+    case ActionType.SEARCH_REDUCERA_SUCCESS:
       return { loading: false, error: null, data: action.payload };
-    case "search_reducerA_error":
+    case ActionType.SEARCH_REDUCERA_ERROR:
       return { loading: false, error: action.payload, data: [] };
     default:
       return state;
