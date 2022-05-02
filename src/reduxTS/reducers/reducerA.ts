@@ -1,13 +1,27 @@
-interface reducerAStateProps {
+interface ReducerAStateProps {
   loading: boolean;
   error: string | null;
   data: string[];
 }
 
+interface SearchActionProps {
+  type: "search_reducerA";
+}
+
+interface SuccessActionProps {
+  type: "search_reducerA_success";
+  payload: string[];
+}
+
+interface ErrorActionProps {
+  type: "search_reducerA_error";
+  payload: string;
+}
+
 const reducerA = (
-  state: reducerAStateProps,
-  action: any
-): reducerAStateProps => {
+  state: ReducerAStateProps,
+  action: SearchActionProps | SuccessActionProps | ErrorActionProps
+): ReducerAStateProps => {
   switch (action.type) {
     case "search_reducerA":
       return { loading: true, error: null, data: [] };
