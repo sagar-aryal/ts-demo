@@ -1,29 +1,10 @@
+import { ActionType } from "../action-types";
+import { Action } from "../actions";
+
 interface ReducerAStateProps {
   loading: boolean;
   error: string | null;
   data: string[];
-}
-
-interface SearchActionProps {
-  type: "search_reducerA";
-}
-
-interface SuccessActionProps {
-  type: "search_reducerA_success";
-  payload: string[];
-}
-
-interface ErrorActionProps {
-  type: "search_reducerA_error";
-  payload: string;
-}
-
-type Action = SearchActionProps | SuccessActionProps | ErrorActionProps;
-
-enum ActionType {
-  SEARCH_REDUCERA = "search_reducerA",
-  SEARCH_REDUCERA_SUCCESS = "search_reducerA_success",
-  SEARCH_REDUCERA_ERROR = "search_reducerA_error",
 }
 
 const reducerA = (
