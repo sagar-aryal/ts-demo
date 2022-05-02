@@ -5,6 +5,7 @@
 ## Technologies Used 💻
 
 - React
+- Redux
 - TypeScript
 
 ## Examples Used
