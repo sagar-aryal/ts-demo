@@ -1,10 +1,12 @@
-import GuestSearch from "./refsTS/GuestSearch";
-
+import { Provider } from "react-redux";
+import ProductsList from "./components/ProductsList";
+import { store } from "./reduxTS/store";
 const App = () => {
   return (
-    <>
-      <GuestSearch />
-    </>
+    <Provider store={store}>
+      <h1>Search for a product</h1>
+      <ProductsList />
+    </Provider>
   );
 };
 

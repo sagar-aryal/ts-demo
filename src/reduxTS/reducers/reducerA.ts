@@ -7,8 +7,14 @@ interface ReducerAStateProps {
   data: string[];
 }
 
+const initialState = {
+  loading: false,
+  error: null,
+  data: [],
+};
+
 const reducerA = (
-  state: ReducerAStateProps,
+  state: ReducerAStateProps = initialState,
   action: Action
 ): ReducerAStateProps => {
   switch (action.type) {
